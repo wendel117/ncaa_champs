@@ -16,7 +16,8 @@ class NcaaChamps::CLI
   def menu
     input = nil 
     while input != "exit"
-    puts "Enter a year to find out which team won the NCAA Championship! (or enter exit to leave)"
+    puts "Enter a year to find out which team won the NCAA Championship!"
+    puts "(Enter exit to leave)"
     input = gets.strip.downcase
     if input == "2019"
       puts "Virginia"
@@ -30,7 +31,7 @@ class NcaaChamps::CLI
     elsif input == "exit"
       puts "Ok see ya!"
     else
-      puts "We don't have information on that year yet, try back soon!"
+      puts "We don't have information on that year yet, try back soon!\n\n"
     end
   end
 end
