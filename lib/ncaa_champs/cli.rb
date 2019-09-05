@@ -1,7 +1,9 @@
-#CLI CONTROLLER
+
 class NcaaChamps::CLI 
   
-  
+  def call
+    puts "NCAA Champions!"
+  end
   
   
   

@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "bundler/setup"
-require "ncaa_champs"
+require 'bundler/setup'
+require 'ncaa_champs'
 
 NcaaChamps::CLI.new.call
