@@ -1,6 +1,3 @@
-require "ncaa_champs/version"
-
-module NcaaChamps
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require_relative "ncaa_champs/version"
+require_relative './ncaa_champs/champ'
+require_relative './ncaa_champs/cli'
