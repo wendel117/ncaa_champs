@@ -1,4 +1,3 @@
-
 class NcaaChamps::CLI 
   
   def call
