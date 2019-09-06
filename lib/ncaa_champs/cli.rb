@@ -9,48 +9,52 @@ class NcaaChamps::CLI
   
   def list_intro
     puts <<-DOC
-    Welcome to the NCAA Champions Information Center
+    WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
     DOC
   end
   
   def menu
     input = nil 
     while input != "exit"
-    puts "Enter a year to find out which team won the NCAA Championship!"
+    puts "****Enter a year to find out which team won the NCAA Championship!****"
     puts "(Enter exit to leave)"
     input = gets.strip.downcase
     if input == "2019"
-      puts "Virginia"
+      puts "2019 Champion was Virginia!"
       more_information
     elsif input == "2018"
-      puts "Villanova"
+      puts "2018 Champion was Villanova!"
       more_information
     elsif input == "2017"
-      puts "North Carolina"
+      puts "2017 Champion was North Carolina!"
       more_information
     elsif input == "exit"
       puts "Ok see ya!"
     else
-      puts "We don't have information on that year yet, try back soon!\n\n"
+      puts "---> We don't have information on that year yet, try back soon!\n\n"
     end
   end
 end
   
   def more_information
-    puts "Enter 1 to view final score; Enter 2 to view location; Enter 3 to view opponent; Enter 4 to select a new year; Enter exit to leave"
+    puts "Select an option below for more information:"
+    puts "1. Final score"
+    puts "2. Location"
+    puts "3. Opponent"
+    puts "4. Select a different year"
     input = gets.strip
     if input == "1"
-      puts "Final Score is *"
+      puts "ANSWER: Final Score was *"
     elsif input == "2"
-      puts "Location: Somewhere"
+      puts "ANSWER: Location: Somewhere"
     elsif input == "3"
-      puts "opponent is you!"
+      puts "ANSWER: opponent is you!"
     elsif input == "4"
     menu
-    elsif input == "exit"
-    puts "Goodbye! See you next time."
+  else
+    puts "Invalid input, please try again!"
   end
 end
-  
+
   
 end
