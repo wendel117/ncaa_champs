@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
 
-require './lib/ncaa_champs'
 
+require "./lib/ncaa_champs"
 NcaaChamps::CLI.new.call

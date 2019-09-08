@@ -15,16 +15,17 @@ class NcaaChamps::CLI
   end
   
   def list_champs
-    @champs = DailyDeal::Champs.all
+    puts "NCAA CHAMPS"
+   @champs = NcaaChamps::Champs.all
+  end
   
   def menu
     input = nil 
     while input != "exit"
-    puts "****Enter a year to find out which team won the NCAA Championship!****"
-    puts "(Enter exit to leave)"
+    puts "****Select an option from the list above to find out which team won the NCAA Championship!****"
     input = gets.strip.downcase
-    if input == "2019"
-      puts "***Virginia!***"
+    if input.to_i > 0
+      puts @champs[input.to_i-1]
       more_information
     elsif input == "2018"
       puts "***Villanova!***"
