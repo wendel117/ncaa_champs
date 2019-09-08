@@ -2,9 +2,9 @@
 class NcaaChamps::CLI 
   
   def call  
-    puts "NCAA Champs"
     list_intro
     menu
+    ending
   end
   
   def list_intro
@@ -20,18 +20,18 @@ class NcaaChamps::CLI
     puts "(Enter exit to leave)"
     input = gets.strip.downcase
     if input == "2019"
-      puts "2019 Champion was Virginia!"
+      puts "***Virginia!***"
       more_information
     elsif input == "2018"
-      puts "2018 Champion was Villanova!"
+      puts "***Villanova!***"
       more_information
     elsif input == "2017"
-      puts "2017 Champion was North Carolina!"
+      puts "***North Carolina!***"
       more_information
     elsif input == "exit"
-      puts "Ok see ya!"
+      puts "Thanks for playing!"
     else
-      puts "---> We don't have information on that year yet, try back soon!\n\n"
+      puts "We don't have information for that year.\n\n"
     end
   end
 end
@@ -56,5 +56,8 @@ end
   end
 end
 
+def ending
+  puts "Stay classy San Diego"
+end
   
 end
