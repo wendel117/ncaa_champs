@@ -3,6 +3,7 @@ class NcaaChamps::CLI
   
   def call  
     list_intro
+    list_champs
     menu
     ending
   end
@@ -12,6 +13,9 @@ class NcaaChamps::CLI
     WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
     DOC
   end
+  
+  def list_champs
+    @champs = DailyDeal::Champs.all
   
   def menu
     input = nil 
