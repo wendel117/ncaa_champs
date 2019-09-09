@@ -1,5 +1,5 @@
 class NcaaChamps::Champs
-  attr_accessor :name, :opponent, :score, :year
+  attr_accessor :year, :name, :opponent, :score
   
   def self.all
     
