@@ -2,41 +2,33 @@
 class NcaaChamps::CLI 
   
   def call  
-    list_intro
     list_champs
     menu
-    ending
-  end
-  
-  def list_intro
-    puts <<-DOC
-    WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
-    DOC
   end
   
   def list_champs
-    puts "NCAA CHAMPS"
+    puts <<-DOC
+    WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
+    Select an option from the list below to see who won!
+    DOC
    @champs = NcaaChamps::Champs.all
+   @champs.each.with_index(1) do |year, i|
+     puts "#{i}. NCAA Champs of #{year}"
+   end
   end
   
   def menu
     input = nil 
     while input != "exit"
-    puts "****Select an option from the list above to find out which team won the NCAA Championship!****"
     input = gets.strip.downcase
     if input.to_i > 0
-      puts @champs[input.to_i-1]
-      more_information
-    elsif input == "2018"
-      puts "***Villanova!***"
-      more_information
-    elsif input == "2017"
-      puts "***North Carolina!***"
+      the_champs = @champs[input.to_i-1]
+      puts "#{the_champs.name}"
       more_information
     elsif input == "exit"
-      puts "Thanks for playing!"
+    puts "Thanks for playing!"
     else
-      puts "We don't have information for that year.\n\n"
+      puts "Invalid entry. Please enter your selection. (1-4)"
     end
   end
 end
@@ -46,23 +38,32 @@ end
     puts "1. Final score"
     puts "2. Location"
     puts "3. Opponent"
-    puts "4. Select a different year"
+    puts "4. Start over"
     input = gets.strip
     if input == "1"
       puts "ANSWER: Final Score was *"
+      playagain
     elsif input == "2"
       puts "ANSWER: Location: Somewhere"
+      playagain
     elsif input == "3"
       puts "ANSWER: opponent is you!"
+      playagain
     elsif input == "4"
-    menu
+    list_champs
   else
     puts "Invalid input, please try again!"
-  end
+end
 end
 
-def ending
-  puts "Stay classy San Diego"
+def playagain
+  puts "Would you like to play again? (Enter yes or no)"
+  input = gets.strip
+  if input == "yes"
+    list_champs
+  elsif input == "no"
+  puts "Aw shucks. Enter exit to leave program."
+end
 end
   
 end
