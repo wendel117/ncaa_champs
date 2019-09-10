@@ -1,5 +1,5 @@
 require 'nokogiri'
-require 'pry'
+require 'open_uri'
 
 require_relative './ncaa_champs/version'
 require_relative './ncaa_champs/champs'
