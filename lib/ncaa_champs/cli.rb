@@ -2,7 +2,6 @@
 class NcaaChamps::CLI 
   
   def call  
-    puts "hello"
     list_champs
     menu
     goodbye
