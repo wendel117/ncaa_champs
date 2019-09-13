@@ -32,6 +32,8 @@ class NcaaChamps::CLI
       puts "Final score was #{the_champs.score}\n\n"
     elsif input == "exit"
     puts "Thanks for stopping by!"
+  else 
+    puts "Invalid entry. please try again. Please enter your selection. (1-4)"
     end
   end
 end
