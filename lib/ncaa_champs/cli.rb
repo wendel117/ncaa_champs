@@ -8,6 +8,11 @@ class NcaaChamps::CLI
     goodbye
   end
   
+  def get_champs
+    NcaaChamps::Scraper.scrape_champs
+    @champs = NcaaChamps::Champs.all 
+  end
+  
   def list_champs
     puts <<-DOC
     WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
