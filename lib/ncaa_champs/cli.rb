@@ -8,7 +8,7 @@ class NcaaChamps::CLI
   end
   
   def get_champs
-    NcaaChamps::Scraper.scrape_champs
+    NcaaChamps::Champs.scrape_champs
     @champs = NcaaChamps::Champs.all 
   end
   
