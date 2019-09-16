@@ -17,8 +17,8 @@ class NcaaChamps::CLI
     WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
     DOC
    @champs = NcaaChamps::Champs.all
-   @champs.each.with_index(1) do |year, i|
-     puts "#{i}. NCAA Champs of #{year}"
+   @champs.each.with_index(1) do |champ, i|
+     puts "#{i}. NCAA Champs of #{champ.year}"
    end
   end
   
@@ -31,6 +31,7 @@ class NcaaChamps::CLI
     if input.to_i > 4
       puts "Invalid entry. Please enter your selection. (1-4)"
     elsif input.to_i > 0
+      puts "\n"
       the_champs = @champs[input.to_i-1]
       puts "#{the_champs.name} won in #{the_champs.year}!"
       puts "They beat #{the_champs.opponent}"
