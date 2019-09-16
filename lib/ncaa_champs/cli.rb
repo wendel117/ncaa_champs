@@ -41,7 +41,7 @@ class NcaaChamps::CLI
   elsif input == "list"
     list_champs
   else 
-    puts "Invalid entry. please try again. Please enter your selection. (1-4)"
+    puts "Invalid entry. please try again."
     end
   end
 end
