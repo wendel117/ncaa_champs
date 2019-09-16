@@ -14,7 +14,7 @@ class NcaaChamps::CLI
   
   def list_champs
     puts <<-DOC
-    WELCOME TO THE NCAA CHAMPION INFORMATION CENTER
+    \n WELCOME TO THE NCAA CHAMPION INFORMATION CENTER\n
     DOC
    @champs = NcaaChamps::Champs.all
    @champs.each.with_index(1) do |champ, i|
@@ -34,8 +34,8 @@ class NcaaChamps::CLI
       puts "\n"
       the_champs = @champs[input.to_i-1]
       puts "#{the_champs.name} won in #{the_champs.year}!"
-      puts "They beat #{the_champs.opponent}"
-      puts "Final score was #{the_champs.score}\n\n"
+      puts "They beat #{the_champs.opponent}."
+      puts "Final score was #{the_champs.score}.\n\n"
     elsif input == "exit"
     puts "Thanks for stopping by!"
   elsif input == "list"
