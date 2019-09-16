@@ -32,7 +32,7 @@ class NcaaChamps::CLI
       puts "Invalid entry. Please enter your selection. (1-4)"
     elsif input.to_i > 0
       puts "\n"
-      the_champs = @champs[input.to_i-1]
+      the_champs = @champs[input.to_i-1] #creates a local variable to use within this instance method.
       puts "#{the_champs.name} won in #{the_champs.year}!"
       puts "They beat #{the_champs.opponent}."
       puts "Final score was #{the_champs.score}.\n\n"
