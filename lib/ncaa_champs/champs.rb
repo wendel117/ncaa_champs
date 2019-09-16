@@ -17,7 +17,7 @@ class NcaaChamps::Champs
   end
   
   def self.scrape_champs_1
-    doc = Nokogiri::HTML(open(https://www.ncaa.com/history/basketball-men/d1))
+    doc = Nokogiri::HTML(open("https://www.ncaa.com/history/basketball-men/d1"))
     champs_1 = self.new 
     champs_1.year = doc.css("div.node__content td").children[0]
     champs_1.name = doc.css("div.node__content td a").children[0]
@@ -27,7 +27,7 @@ class NcaaChamps::Champs
   end
 
   def self.scrape_champs_2
-    doc = Nokogiri::HTML(open(https://www.ncaa.com/history/basketball-men/d1))
+    doc = Nokogiri::HTML(open("https://www.ncaa.com/history/basketball-men/d1"))
     champs_2 = self.new 
     champs_2.year = doc.css("div.node__content td").children[6]
     champs_2.name = doc.css("div.node__content td a").children[1]
@@ -37,7 +37,7 @@ class NcaaChamps::Champs
   end
 
   def self.scrape_champs_3
-    doc = Nokogiri::HTML(open(https://www.ncaa.com/history/basketball-men/d1))
+    doc = Nokogiri::HTML(open("https://www.ncaa.com/history/basketball-men/d1"))
     champs_3 = self.new 
     champs_3.year = doc.css("div.node__content td").children[12]
     champs_3.name = doc.css("div.node__content td a").children[2]
@@ -47,7 +47,7 @@ class NcaaChamps::Champs
   end
 
   def self.scrape_champs_4
-    doc = Nokogiri::HTML(open(https://www.ncaa.com/history/basketball-men/d1))
+    doc = Nokogiri::HTML(open("https://www.ncaa.com/history/basketball-men/d1"))
     champs_4 = self.new 
     champs_4.year = doc.css("div.node__content td").children[18]
     champs_4.name = doc.css("div.node__content td a").children[3]
