@@ -7,12 +7,12 @@ class NcaaChamps::CLI
     goodbye
   end
   
-  def get_champs
-    NcaaChamps::Champs.scrape_champs
-    @champs = NcaaChamps::Champs.all 
+  def get_champs #instance method
+    NcaaChamps::Champs.scrape_champs #uses information from Champs class method scrape_champs
+    @champs = NcaaChamps::Champs.all #sets @champs as a class method that includes everything in Champs class variable all
   end
   
-  def list_champs
+  def list_champs #instance method
     puts <<-DOC
     \n WELCOME TO THE NCAA CHAMPION INFORMATION CENTER\n
     DOC
