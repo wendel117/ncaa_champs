@@ -7,13 +7,12 @@ https://www.ncaa.com/history/basketball-men/d1
     - Search for winner by year
     - show opponent, final score, and coach at the time
 
-User types in NCAA Champions
-Ask user for year
-Input year.
-Show champion - Virginia
-What other information do you want?
-	- final score
-	- opponent 
-	- location
-	- coach
-	- new year
+Welcome message appears followed by 4 year options for information.
+Ask user for which year they'd like info on.
+User inputs year.
+Show champion info:
+- name
+- opponent
+- final score
+Ask user to input another selection, see list again or exit.
+goodbye message
