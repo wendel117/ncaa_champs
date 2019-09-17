@@ -28,7 +28,7 @@ class NcaaChamps::CLI
     puts "Select option from the list above to see who won and more!"
     puts "(Enter exit to leave or list to view options again)"
     input = gets.strip.downcase
-    if input.to_i > 4
+    if input.to_i > 4 #has to come first because it is greater than 0 which is next option
       puts "Invalid entry. Please enter your selection. (1-4)"
     elsif input.to_i > 0
       puts "\n"

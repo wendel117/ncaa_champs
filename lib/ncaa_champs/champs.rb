@@ -1,6 +1,6 @@
 class NcaaChamps::Champs
   @@all = [] #empty array ready for instances
-  attr_accessor :year, :name, :opponent, :score
+  attr_accessor :year, :name, :opponent, :score #creates reader and writer for each instance variable
 
  def self.all #class method for all
    
